@@ -57,22 +57,25 @@ Load synbreed library
 
 Load test data
 
-`test<-read.csv("Docker_Rpackage_synbreed/synbreed_test_data.csv",header=1)
-head(test)
-`
+`test<-read.csv("Docker_Rpackage_synbreed/synbreed_test_data.csv",header=1)`
+
+`head(test)`
+
 ![Screen Shot 2022-03-21 at 2 32 47 PM](https://user-images.githubusercontent.com/22206944/159367405-de4db77b-1d2b-43f7-ad3a-0bd3a0aad778.png)
 
 synbreed requires a dataframe of loci (no sample names) and row names. So, we will make a new dataframe with the test data and make the sample names the row names for the synbreed data conversion. 
 
-`locus<-test[c(2:ncol(test))]
-head(locus)`
+`locus<-test[c(2:ncol(test))]`
+
+`head(locus)`
 
 ![Screen Shot 2022-03-21 at 2 37 14 PM](https://user-images.githubusercontent.com/22206944/159367917-a906d7dc-1fdf-45d0-9828-e32fb3124d57.png)
 
 Add row names
 
-`rownames(locus)<-test$ID
-head(locus)`
+`rownames(locus)<-test$ID`
+
+`head(locus)`
 
 ![Screen Shot 2022-03-21 at 2 38 17 PM](https://user-images.githubusercontent.com/22206944/159368006-5fab2145-dc83-4abf-80ed-2563b0fe156e.png)
 
@@ -86,8 +89,9 @@ Convert allele to dosage genotype format with function codeGeno. This time witho
 
 Save converted data in a new dataframe. 
 
-`geno<-data.frame(geno$geno)
-head(geno)`
+`geno<-data.frame(geno$geno)`
+
+`head(geno)`
 
 ![Screen Shot 2022-03-21 at 2 41 33 PM](https://user-images.githubusercontent.com/22206944/159368351-c654e2d2-1877-4854-b9c5-3b0a88eb4b65.png)
 
