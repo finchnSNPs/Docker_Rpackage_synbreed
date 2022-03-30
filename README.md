@@ -33,7 +33,7 @@ Download docker image to be run with singluarity.
 Load module first if necessary.
 `module load singularity`
 
-`singularity pull synbreed.sif docker://finchnsnps/synbreed/synbreed`
+`singularity pull synbreed.sif docker://finchnsnps/synbreed:synbreed`
 
 Open container as a shell with singularity.
 
